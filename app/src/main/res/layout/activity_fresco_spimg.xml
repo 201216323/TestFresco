@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fresco_spimg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bruce.chang.testfresco.FrescoSpimgActivity">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_fresco"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        fresco:placeholderImage="@mipmap/fbb"
+        />
+
+    <Button
+        android:id="@+id/bt_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载"
+        />
+</LinearLayout>

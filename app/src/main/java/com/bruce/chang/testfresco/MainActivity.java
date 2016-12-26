@@ -1,7 +1,8 @@
 package com.bruce.chang.testfresco;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -44,22 +45,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bt_fresco_spimg:
+                startActivity(new Intent(MainActivity.this,FrescoSpimgActivity.class));
                 break;
             case R.id.bt_fresco_crop:
+                startActivity(new Intent(MainActivity.this,FrescoCropActivity.class));
                 break;
             case R.id.bt_fresco_circleAndCorner:
+                startActivity(new Intent(MainActivity.this,FrescoCircleActivity.class));
                 break;
             case R.id.bt_fresco_jpeg:
+                startActivity(new Intent(MainActivity.this,FrescoJianJinShiActivity.class));
                 break;
             case R.id.bt_fresco_gif:
+                startActivity(new Intent(MainActivity.this,FrescoGifActivity.class));
                 break;
             case R.id.bt_fresco_multi:
+                startActivity(new Intent(MainActivity.this,FrescoMultiActivity.class));
                 break;
             case R.id.bt_fresco_listener:
+                startActivity(new Intent(MainActivity.this,FrescoListenerActivity.class));
                 break;
             case R.id.bt_fresco_resize:
+                startActivity(new Intent(MainActivity.this,FrescoScaleAndRotateActivity.class));
                 break;
             case R.id.bt_fresco_modifyImg:
+                startActivity(new Intent(MainActivity.this,FrescoutoSizeImgActivity.class));
                 break;
             case R.id.bt_fresco_autoSizeImg:
                 break;
