@@ -3,6 +3,8 @@
     package="com.bruce.chang.testfresco">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".APP"
@@ -26,7 +28,8 @@
         <activity android:name=".FrescoMultiActivity" />
         <activity android:name=".FrescoListenerActivity" />
         <activity android:name=".FrescoScaleAndRotateActivity" />
-        <activity android:name=".FrescoutoSizeImgActivity"></activity>
+        <activity android:name=".FrescoModifyImgActivity" />
+        <activity android:name=".FrescoDynamicDisplayImgActivity"></activity>
     </application>
 
 </manifest>

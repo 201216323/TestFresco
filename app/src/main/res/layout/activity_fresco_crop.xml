@@ -12,7 +12,7 @@
         android:layout_marginTop="48dp"
         android:background="@android:color/black"
         fresco:placeholderImage="@mipmap/fbb" />
-
+    <!--裁剪方式的描述信息-->
     <TextView
         android:id="@+id/tv_fresco_explain"
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:orientation="vertical">
-
+            <!--9个button-->
             <Button
                 android:id="@+id/bt_fresco_center"
                 android:layout_width="match_parent"

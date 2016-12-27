@@ -69,9 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this,FrescoScaleAndRotateActivity.class));
                 break;
             case R.id.bt_fresco_modifyImg:
-                startActivity(new Intent(MainActivity.this,FrescoutoSizeImgActivity.class));
+                startActivity(new Intent(MainActivity.this,FrescoModifyImgActivity.class));
                 break;
             case R.id.bt_fresco_autoSizeImg:
+                startActivity(new Intent(MainActivity.this,FrescoDynamicDisplayImgActivity.class));
                 break;
             default:
                 break;

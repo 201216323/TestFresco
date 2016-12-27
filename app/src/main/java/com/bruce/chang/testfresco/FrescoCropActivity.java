@@ -54,6 +54,7 @@ public class FrescoCropActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+            //CENTER
             case R.id.bt_fresco_center:
                 tv_fresco_explain.setText("居中，无缩放");
                 //样式设置
@@ -61,6 +62,7 @@ public class FrescoCropActivity extends AppCompatActivity implements View.OnClic
                 //显示图片
                 imageDisplay(hierarchy);
                 break;
+            //CENTER_CROP
             case R.id.bt_fresco_centercrop:
                 tv_fresco_explain.setText("保持宽高比缩小或放大，使得两边都大于或等于显示边界。居中显示");
                 //样式设置
@@ -68,6 +70,7 @@ public class FrescoCropActivity extends AppCompatActivity implements View.OnClic
                 //显示图片
                 imageDisplay(hierarchy1);
                 break;
+            //FOCUS_CROP
             case R.id.bt_fresco_focuscrop:
                 tv_fresco_explain.setText("同centerCrop, 但居中点不是中点，而是指定的某个点,这里我设置为图片的左上角那点");
                 //设置focusCrop的缩放形式  并指定缩放的中心点在左上角
@@ -79,33 +82,39 @@ public class FrescoCropActivity extends AppCompatActivity implements View.OnClic
                 //显示图片
                 imageDisplay(hierarchy2);
                 break;
+            //CENTER_INSIDE
             case R.id.bt_fresco_centerinside:
                 tv_fresco_explain.setText("使两边都在显示边界内，居中显示。如果图尺寸大于显示边界，则保持长宽比缩小图片");
                 GenericDraweeHierarchy hierarchy3 = builder.setActualImageScaleType(ScalingUtils.ScaleType.CENTER_INSIDE).build();
                 imageDisplay(hierarchy3);
                 break;
+            //FIT_CENTER
             case R.id.bt_fresco_fitcenter:
                 tv_fresco_explain.setText("保持宽高比，缩小或者放大，使得图片完全显示在显示边界内。居中显示");
                 GenericDraweeHierarchy hierarchy4 = builder.setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER).build();
                 imageDisplay(hierarchy4);
                 break;
+            //FIT_START
             case R.id.bt_fresco_fitstart:
                 tv_fresco_explain.setText("保持宽高比，缩小或者放大，使得图片完全显示在显示边界内，不居中，和显示边界左上对齐");
                 GenericDraweeHierarchy hierarchy5 = builder.setActualImageScaleType(ScalingUtils.ScaleType.FIT_START).build();
                 imageDisplay(hierarchy5);
                 break;
+            //FIT_END
             case R.id.bt_fresco_fitend:
                 tv_fresco_explain.setText("保持宽高比，缩小或者放大，使得图片完全显示在显示边界内，不居中，和显示边界右下对齐");
                 GenericDraweeHierarchy hierarchy6 = builder.setActualImageScaleType(ScalingUtils.ScaleType.FIT_END).build();
                 imageDisplay(hierarchy6);
                 break;
+            //FIT_XY
             case R.id.bt_fresco_fitxy:
                 tv_fresco_explain.setText("不保持宽高比，填充满显示边界");
                 GenericDraweeHierarchy hierarchy7 = builder.setActualImageScaleType(ScalingUtils.ScaleType.FIT_XY).build();
                 imageDisplay(hierarchy7);
                 break;
+            //null
             case R.id.bt_fresco_none:
-                tv_fresco_explain.setText("如要使用tile mode显示, 需要设置为none");
+                tv_fresco_explain.setText("不设置任何样式");
                 GenericDraweeHierarchy hierarchy8 = builder.setActualImageScaleType(null).build();
                 imageDisplay(hierarchy8);
                 break;
@@ -114,6 +123,7 @@ public class FrescoCropActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
+    //显示图片
     private void imageDisplay(GenericDraweeHierarchy hierarchy) {
         sdv_fresco_crop.setHierarchy(hierarchy);
         Uri uri = Uri.parse("http://bizhi.zhuoku.com/bizhi/200706/4/20070625/bingbing/012.jpg");
